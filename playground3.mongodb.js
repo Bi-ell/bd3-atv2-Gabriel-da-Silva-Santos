@@ -1,64 +1,19 @@
 use('BD3-NoSQL-ATV2');
 
-db.insertMany([
-    {
-        nome: "Mouse Gamer",
-        categoria: "Periférico",
-        preco: 150,
-        estoque: 20
-    },
-    {
-        nome: "Teclado Mecânico",
-        categoria: "Periférico",
-        preco: 450,
-        estoque: 15
-    },
-    {
-        nome: "Monitor",
-        categoria: "Hardware",
-        preco: 900,
-        estoque: 8
-    },
-    {
-        nome: "Notebook",
-        categoria: "Hardware",
-        preco: 1000,
-        estoque: 5
-    },
-    {
-        nome: "Headset",
-        categoria: "Áudio",
-        preco: 300,
-        estoque: 12
-    },
-    {
-        nome: "SSD",
-        categoria: "Hardware",
-        preco: 600,
-        estoque: 18
-    },
-    {
-        nome: "HD Externo",
-        categoria: "Hardware",
-        preco: 350,
-        estoque: 9
-    },
-    {
-        nome: "Webcam",
-        categoria: "Periférico",
-        preco: 200,
-        estoque: 14
-    },
-    {
-        nome: "Cadeira Gamer",
-        categoria: "Móveis",
-        preco: 750,
-        estoque: 4
-    },
-    {
-        nome: "Microfone",
-        categoria: "Áudio",
-        preco: 520,
-        estoque: 7
-    }
-])
+// Produtos com preço maior que 700
+db['BD3-NoSQL-ATV2'].find({
+  preco: { $gt: 700 }
+})
+
+// Produtos com preço menor que 450
+db['BD3-NoSQL-ATV2'].find({
+  preco: { $lt: 450 }
+})
+
+// Produtos com preço entre 500 e 950
+db['BD3-NoSQL-ATV2'].find({
+  preco: {
+    $gte: 500,
+    $lte: 950
+  }
+})
