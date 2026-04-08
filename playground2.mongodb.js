@@ -1,5 +1,5 @@
 
-use('BD3-NoSQL-ATV2');
+use('BD3-NoSQL-Produto');
 
 db['BD3-NoSQL-ATV2'].insertMany([
     {

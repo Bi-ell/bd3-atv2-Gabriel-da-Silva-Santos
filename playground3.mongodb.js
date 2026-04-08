@@ -1,4 +1,4 @@
-use('BD3-NoSQL-ATV2');
+use('BD3-NoSQL-Produto');
 
 // Produtos com preço maior que 700
 db['BD3-NoSQL-ATV2'].find({
